@@ -4,17 +4,17 @@
 
 | 用途       | 类型       | 举例 | 构造函数     |
 | ---------- | ---------- | ---- | ------------ |
-| 文本类型   | str        |      | str()        |
 | 数值类型   | int        |      | int()        |
 |            | float      |      | float()      |
 |            | complex    |      | complex()    |
+| 布尔类型   | bool       |      | bool         |
+| 文本类型   | str        |      | str()        |
 | 序列类型   | list       |      | list()       |
 |            | tuple      |      | tuple()      |
 |            | range      |      | range()      |
-| 映射类型   | dict       |      | dict()       |
 | 集合类型   | set        |      | set()        |
 |            | frozenset  |      | frozenset()  |
-| 布尔类型   | bool       |      | bool         |
+| 映射类型   | dict       |      | dict()       |
 | 二进制类型 | bytes      |      | bytes()      |
 |            | bytearray  |      | bytearray()  |
 |            | memoryview |      | memoryview() |
@@ -91,6 +91,10 @@ print(random.randrange(1, 10))
 
 
 
+## 布尔值
+
+`bool()` 函数可以评估任何值，并返回`True` 或 `False`。
+
 ## 字符串
 
 字符串是由数字、字母、下划线组成的一串字符，字符串可以用单引号或双引号进行声明；可以使用三个(单)引号将多行字符串赋值给变脸。
@@ -142,7 +146,7 @@ cde
 """
 ```
 
-### 字符串合并
+### 字符串级联
 
 ```python
 #!/usr/bin/python3
@@ -153,7 +157,24 @@ z = x + y
 print(z)
 ```
 
+### 字符串包含
+
+用`in`  `not in` 判断字符串是否包含。
+
+```python
+txt = "China is a great country"
+# 输出bool类型
+x = "ina" in txt
+print(x)
+```
+
 ### 字符串方法
+
+| 方法 | 描述 |
+| ---- | ---- |
+|      |      |
+
+**示例**
 
 ```python
 str = " Hello, World! "
@@ -169,6 +190,17 @@ print(str.replace("World", "Kitty"))
 # 切割字符串
 print(a.split(","))
 ```
+
+**格式化字符串**
+
+```python
+age = 63
+txt = "My name is Bill, I am {}"
+
+print(txt.format(age))
+```
+
+
 
 
 
