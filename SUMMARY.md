@@ -4,5 +4,6 @@
 
 # python
 
-* [环境搭建](python/环境搭建.md)
+* [python](python/README.md)
+  * [环境搭建](python/环境搭建.md)
 
