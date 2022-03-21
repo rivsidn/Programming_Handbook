@@ -15,7 +15,7 @@
   * [python分支](python/python分支.md)
   * [python循环](python/python循环.md)
   * [python函数](python/python函数.md)
-  * [python Lambda](python/python Lambda.md)
+  * [python Lambda](python/python&#32;Lambda.md)
   * [python类和对象](python/python类和对象.md)
   * [python继承](python/python继承.md)
   * [python迭代器](python/python迭代器.md)
