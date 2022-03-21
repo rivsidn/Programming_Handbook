@@ -5,7 +5,7 @@
 # python
 
 * [python](python/README.md)
-  * [python基础](python/README.md)
+  * [python基础](python/base_README.md)
     * [python运行](python/python运行.md)
     * [python注释](python/python注释.md)
     * [python变量](python/python变量.md)
