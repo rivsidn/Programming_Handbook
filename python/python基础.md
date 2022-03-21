@@ -58,23 +58,6 @@ print("Hello, World!\n")
 
 
 
-## 变量创建
-
-python 中没有声明变量的命令，首次赋值时，才会创建变量。
-
-### 多变量赋值
-
-```python
-a = b = c = 1
-a, b, c = 1, 2, "python"
-```
-
-### 变量对向删除
-
-```python
-del var_a, var_b
-```
-
 
 
 
