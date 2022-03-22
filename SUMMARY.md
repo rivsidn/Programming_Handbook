@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 
-# python
+## python
 
 * [python](python/README.md)
   * [python基础](python/python_base/README.md)
@@ -30,4 +30,9 @@
     * [python异常处理](python/python_base/python异常处理.md)
     * [python帮助文档](python/python_base/python帮助文档.md)
     * [python关键字](python/python_base/python关键字.md)
+
+## bpftrace
+* [bpftrace](bpftrace/README.md)
+  * [bpftrace安装](bpftrace/bpftrace安装.md)
+  * [bpftrace man手册](bpftrace/bpftrace&#32;man手册.md)
 
