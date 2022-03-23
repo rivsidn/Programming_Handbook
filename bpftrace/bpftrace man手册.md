@@ -140,6 +140,8 @@ probe[,probe]
 }
 ```
 
+每个动作块可以有多个探测点，探测点之间由逗号',' 链接。 
+
 
 
 | 语法      | 解释                                                         |
@@ -409,37 +411,257 @@ unroll(n) {
 
 map函数是一类特殊的内建函数，返回值只能赋值给map变量。
 
+| 函数名 | 函数原型                                         | 是否异步 | 解释                                        |
+| ------ | ------------------------------------------------ | -------- | ------------------------------------------- |
+| avg    | avg(int64 n)                                     |          | 计算多次调用的平均值                        |
+| clear  | clear(map m)                                     | 是       | 清空map中所有的keys/values值                |
+| count  | count()                                          |          | 统计函数调用的此时，内部通过PER_CPU变量实现 |
+| delete | delete(mapkey k)                                 |          | 从map中删除一个key值                        |
+| hist   | hist(int64 n)                                    |          | 创建一个log2 的直方图                       |
+| lhist  | lhist(int64 n, int64 min, int64 max, int64 step) |          | 创建一个线性直方图                          |
+| max    | max(int64 n)                                     |          | 如果n 大于当前map值则更新                   |
+| min    | min(int64 n)                                     |          | 如果n 小于当前map值则更新                   |
+| stats  | stats(int64 n)                                   |          | 集合count, avg, sum调用于一个               |
+| sum    | sum(int64 n)                                     |          | 计算所有n 的和                              |
+| zero   | zero(map m)                                      | 是       | 设置map中所有的值为 0                       |
+
 
 
 ## 函数
 
+| 函数名      | 函数原型                                                     | 异步/安全/编译时 | 解释                                 |
+| ----------- | ------------------------------------------------------------ | ---------------- | ------------------------------------ |
+| buf         | buf_t buf(void *data, [int64 length])                        |                  | 从data中获取length长度               |
+| cat         | void cat(string namefmt, [...args])                          | 异步             | dump文件中的内容到标准输出           |
+| cgroup_path | cgroup_path cgroup_path(int cgroupid, string filter)         |                  | 将cgroup id转换成对应的路径          |
+| cgroupid    | uint64 cgroupid(const string path)                           | 编译时           | 转换路径为id 号                      |
+| exit        | void exit()                                                  | 异步             | 结束追踪                             |
+| join        | void join(char *arr[], [char *sep = ' '])                    | 异步             | 拼接字符串中的值                     |
+| kaddr       | uint64 kaddr(const string name)                              | 编译时           | 获取内核符号地址                     |
+| kptr        | T * kptr(T * ptr)                                            |                  | 标记ptr 为内核指针                   |
+| ksym        | ksym_t ksym(uint64 addr)                                     | 异步             | 返回名称对应的地址                   |
+| macaddr     | macaddr_t macaddr(char [6] mac)                              |                  | 返回表示mac地址的字符串              |
+| ntop        | inet_t ntop([int64 af,] int addr)<br />inet_t ntop([int64 af,] int addr[4])<br />inet_t ntop([int64 af,] char addr[16]) |                  | 返回IP地址的字符串表示               |
+| override    | override(uint 64)                                            | 不安全           | 并不执行函数，直接返回返回值         |
+| reg         | reg(const string name)                                       |                  | 获取当前寄存器的内容                 |
+| signal      | signal(const string sig)<br />signal(uint32 signum)          | 不安全           | 给追踪的进程发送信号                 |
+| sizeof      | sizeof(TYPE)<br />sizeof(EXPRESSION)                         | 编译时           | 返回参数的字节数                     |
+| str         | str(char *data[, uint32 length])                             |                  | 读取字符串                           |
+| strftime    | strftime_t strftime(const string fmt, int64 timestamp_ns)    | 异步             | 格式化输出系统启动时间               |
+| strncmp     | int64 strncmp(char *s1, char *s2, int64 n)                   |                  | 建议直接调用 `==` 和 `!=`            |
+| system      | void system(string namefmt [, ...args])                      | 不安全/异步      | 执行命令                             |
+| time        | void time(const string fmt)                                  | 异步             | 格式化当前墙上时间，输出到标注你输出 |
+| uaddr       | T * uaddr(const string sym)                                  |                  | 返回用户态符号表地址                 |
+| uptr        | T * uptr(T * ptr)                                            |                  | 标记该指针为用户态指针               |
+| usym        | usym_t usym(uint64 * addr)                                   | 异步             | 返回用户态符号表地址                 |
+| path        | char *path(struct path * path)                               |                  | 返回path 的完整路径名                |
+| unwatch     | void unwatch(void *addr)                                     | 异步             | 移除一个观测点                       |
 
 
-## 输出格式
+
+## 格式化输出
+
+### print 函数
+
+* **异步**
+* 支持`top` 和 `div` 参数
+
+### printf 函数
+
+* **异步**
+* 支持转移序列
+* 支持颜色
 
 
 
 ## 探测点
 
+探测点由提供者和冒号分割的选项组成，探测点支持通配符，提供者可以由缩写表示。
+
+### 开始结束
+
+两个内建的特殊事件，`BEGIN` 在所有探测点绑定之前触发，`END` 在所有探测点解引用之后触发。
+
+为了防止打印出所有用到的`map` 可以在`END` 时将`map` 清空。
+
+### 硬件事件
+
+> hardware:event
+>
+> hardware:event_name:count
+
+缩写：h
+
+`count` 指定时间触发前事件发生的次数。
+
+硬件探测点绑定内核预定义的硬件事件，通过performance monitoring counters(PMCS)实现，PMCs为CPU上的硬件资源，可以通过perf_event_open(2) man 手册查看。
+
+**事件名称：**
+
+* cpu-cycles 或 cycles
+* instructions
+* cache-references
+* cache-misses
+* branch-instructions 或 branches
+* branch-misses
+* bus-cycles
+* frontend-stalls
+* backend-stalls
+* ref-cycles
+
+### 时间间隔
+
+> interval : us : count
+>
+> interval : ms : count
+>
+> interval : s : count
+>
+> interval : hz : rate
+
+缩写：i
+
+### 迭代器
+
+> iter : task
+>
+> iter : task : pin
+>
+> iter : task_file
+>
+> iter : task_file : pin
+
+缩写：it
+
+迭代器探测点，允许遍历内核数据结构。
+
+迭代器不能与其他探测点混用，即使是其他迭代器。
+
+### kfunc 和 kretfunc
+
+> kfunc : fn
+>
+> kretfunc : fn
+
+缩写：
+
+* f (kfunc)
+* fr (kretfunc)
+
+要求：
+
+* 内核特性：BTF
+* 探测点类型：kfunc
+
+
+
+### kprobe 和 kretprobe
+
+> kprobe : fn
+>
+> kprobe : fn + offset
+>
+> kretprobe : fn
+
+缩写：
+
+* k
+* kr
+
+函数的参数可以通过`ragX` 和 `sargX` 内建函数获取，用于寄存器参数和栈参数，参数传递方式与架构相关。
+
+`bpftrace` 并不检测函数签名，所以并不知道函数的参数类型，需要用户自己进行类型转换。
+
+`kretprobe` 只能获取函数的返回值，获取不到函数参数。
+
+### profile
+
+> profile : us : count
+>
+> profile : ms : count 
+>
+> profile : s : count
+>
+> profile : hz : rate
+
+缩写：
+
+* p
+
+特定时间间隔触发
+
+### software
+
+> software : event :
+>
+> software : event : count
+
+缩写：
+
+* s
+
+在特定的软件事件时触发，事件细节可以查看 `perf_event_open(2)` man 手册。
+
+事件名称为：
+
+* cpu-clock 或 cpu
+* task-clock
+* page-faults 或 faults
+* context-switches 或 cs
+* cpu-migrations
+* minor-faults
+* major-faults
+* alignment-faults
+* emulation-faults
+* dummy
+* bpf-output
+
+### tracepoint
+
+> tracepoint: subsys: event
+
+缩写：
+
+* t
+
+### uprobe和uretprobe
+
+> uprobe : binary : func
+>
+> uprobe : binary : func+offset
+>
+> uretprobe : binary : func
+
+缩写：
+
+* u
+* ur
+
+### usdt
+
+> usdt : binary : name
+
+缩写：
+
+* U
+
+### watchpoint 和 asyncwatchpoint
+
+> watchpoint : absolute_address : length : mode
+>
+> watchpoint : function + argN : length : mode
+
+缩写：
+
+* w
+* aw
+
 
 
 ## 显示探测点
 
+显示当前系统支持的探测点，支持的语法跟正常的绑定相同。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+`-v` 选项可以用于显示支持的参数列表。 
 
 
