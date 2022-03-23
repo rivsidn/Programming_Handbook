@@ -36,9 +36,8 @@
 * [bpftrace](bpftrace/README.md)
   * [bpftrace安装](bpftrace/bpftrace安装.md)
   * [bpftrace man手册](bpftrace/bpftrace&#32;man手册.md)
-  * [bpftrace语法](bpftrace/grammer/README.md)
-    * [bpftrace运行](bpftrace运行.md)
-    * [bpftrace map变量](bpftrace&#32;map变量.md)
-    * [bpftrace map函数](bpftrace&#32;map函数.md)
+  * [bpftrace语言](bpftrace/bpftrace语言.md)
+  * [bpftrace map函数](bpftrace/bpftrace&#32;map函数.md)
+  * [bpftrace探测点](bpftrace/bpftrace探测点.md)
 
 
