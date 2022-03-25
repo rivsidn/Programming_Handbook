@@ -2,6 +2,11 @@
 
 * [Introduction](README.md)
 
+## bash
+
+* [bash](bash/README.md)
+  * [bash分支](bash/bash分支.md)
+
 ## python
 
 * [python](python/README.md)
