@@ -5,7 +5,12 @@
 ## bash
 
 * [bash](bash/README.md)
-  * [bash分支](bash/bash分支.md)
+  * [bash名词定义](bash/bash名词定义.md)
+  * [bash执行流程](bash/bash执行流程.md)
+  * [bash注释](bash/bash注释.md)
+  * [bash引用](bash/bash引用.md)
+  * [bash命令](bash/bash命令.md)
+  * [bash复合命令](bash/bash复合命令.md)
 
 ## python
 
