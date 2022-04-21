@@ -11,6 +11,8 @@
   * [bash引用](bash/bash引用.md)
   * [bash命令](bash/bash命令.md)
   * [bash复合命令](bash/bash复合命令.md)
+  * [bash展开](bash/bash展开.md)
+    * [bash进程替换](bash/expansion/bash进程替换.md)
 
 ## python
 
