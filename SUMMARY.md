@@ -12,6 +12,8 @@
   * [bash命令](bash/bash命令.md)
   * [bash复合命令](bash/bash复合命令.md)
   * [bash展开](bash/bash展开.md)
+  * [bash行编译设置](bash/bash行编辑设置.md)
+  * [bash搜索历史记录](bash/bash搜索历史记录.md)
 
 ## python
 
