@@ -27,6 +27,10 @@
   * [bash脚本常用命令](bash/manual/README.md)
     * [mkfifo](bash/manual/mkfifo.md)
 
+## C
+
+* [C](C/README.md)
+
 ## python
 
 * [python](python/README.md)
