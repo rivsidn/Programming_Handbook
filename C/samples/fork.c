@@ -8,7 +8,6 @@ void parent()
 	volatile int sum = 0;
 
 	for (i = 0; i < 1000000; i++) {
-//	while (1) {
 		sum += i;
 	}
 }
@@ -19,7 +18,6 @@ void child()
 	volatile int sum = 0;
 
 	for (i = 0; i < 1000000; i++) {
-//	while (1) {
 		sum += i;
 	}
 	return;
