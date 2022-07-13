@@ -31,6 +31,10 @@
 
 * [C](C/README.md)
 
+## ld script
+
+* [lds](lds/README.md)
+
 ## python
 
 * [python](python/README.md)
