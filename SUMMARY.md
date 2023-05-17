@@ -41,6 +41,11 @@
 
 * [lds](lds/README.md)
 
+## perl
+
+* [perl](perl/README.md)
+  * [perl变量](perl/perl变量.md)
+
 ## python
 
 * [python](python/README.md)
