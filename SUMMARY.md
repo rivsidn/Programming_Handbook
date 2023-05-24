@@ -44,7 +44,7 @@
 ## perl
 
 * [perl](perl/README.md)
-  * [perl变量](perl/perl变量.md)
+  * [perl标量](perl/perl标量.md)
 
 ## python
 
