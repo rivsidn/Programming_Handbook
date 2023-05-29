@@ -41,10 +41,16 @@
 
 * [lds](lds/README.md)
 
+## m4
+
+* [m4](m4/README.md)
+
 ## perl
 
 * [perl](perl/README.md)
   * [perl标量](perl/perl标量.md)
+  * [perl数组](perl/perl数组.md)
+  * [perl子程序](perl/perl子程序.md)
   * [perl示例程序](perl/perl示例程序.md)
 
 ## python
