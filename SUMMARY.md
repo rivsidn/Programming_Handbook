@@ -45,6 +45,7 @@
 
 * [perl](perl/README.md)
   * [perl标量](perl/perl标量.md)
+  * [perl示例程序](perl/perl示例程序.md)
 
 ## python
 
