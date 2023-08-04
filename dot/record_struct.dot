@@ -1,0 +1,24 @@
+digraph {
+	nodesep = .05
+	rankdir = "LR"
+	node [shape=record]
+
+	test1 [ label = "
+			struct test |
+			|
+			AA |
+			|
+			<BB> BB
+		"
+	]
+	test2 [ label = "
+			struct test |
+			|
+			AA |
+			|
+			<BB> BB
+		"
+	]
+
+	test1:BB -> test2:BB
+}
