@@ -33,6 +33,15 @@
   * [bash脚本常用命令](bash/manual/README.md)
     * [mkfifo](bash/manual/mkfifo.md)
 
+## bpftrace
+
+* [bpftrace](bpftrace/README.md)
+  * [bpftrace安装](bpftrace/bpftrace安装.md)
+  * [bpftrace man手册](bpftrace/bpftrace&#32;man手册.md)
+  * [bpftrace语言](bpftrace/bpftrace语言.md)
+  * [bpftrace map函数](bpftrace/bpftrace&#32;map函数.md)
+  * [bpftrace探测点](bpftrace/bpftrace探测点.md)
+
 ## C
 
 * [C](C/README.md)
@@ -82,13 +91,8 @@
     * [python帮助文档](python/python_base/python帮助文档.md)
     * [python关键字](python/python_base/python关键字.md)
 
-## bpftrace
+## tcl
 
-* [bpftrace](bpftrace/README.md)
-  * [bpftrace安装](bpftrace/bpftrace安装.md)
-  * [bpftrace man手册](bpftrace/bpftrace&#32;man手册.md)
-  * [bpftrace语言](bpftrace/bpftrace语言.md)
-  * [bpftrace map函数](bpftrace/bpftrace&#32;map函数.md)
-  * [bpftrace探测点](bpftrace/bpftrace探测点.md)
-
+* [tcl](tcl/README.md)
+  * [tcl速查手册](tcl/tcl_handbook.md)
 
