@@ -90,6 +90,7 @@
     * [python异常处理](python/python_base/python异常处理.md)
     * [python帮助文档](python/python_base/python帮助文档.md)
     * [python关键字](python/python_base/python关键字.md)
+  * [python工具集](python/tools/README.md)
 
 ## tcl
 

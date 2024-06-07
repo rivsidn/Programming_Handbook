@@ -1,11 +1,19 @@
 #! /usr/bin/tclsh
 
-proc print12 {AA} {
-	upvar $AA a
-	puts "$a(1), $a(2)"
+proc l4 {} {
+	puts [info level -3]
 }
 
-set test(1) "A"
-set test(2) "B"
+proc l3 {} {
+	l4
+}
 
-print12 test
+proc l2 {} {
+	l3
+}
+
+proc l1 {a} {
+	l2
+}
+
+l1 10
