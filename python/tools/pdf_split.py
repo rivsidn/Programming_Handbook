@@ -70,6 +70,6 @@ def split_pdf_by_bookmarks(input_pdf, output_dir, level=1):
     document.close()
 
 # 使用示例
-input_pdf = "KVM虚拟化技术-实战与原理解析.pdf"
+input_pdf = "Code+Complete+2nd+Edition.pdf"
 output_dir = "output"
 split_pdf_by_bookmarks(input_pdf, output_dir, level=1)
