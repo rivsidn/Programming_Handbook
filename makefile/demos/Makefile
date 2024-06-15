@@ -1,3 +1,4 @@
 
-$(info $(firstword aa bb cc dd))
+all:
+	echo "TEST"
 
