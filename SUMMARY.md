@@ -69,6 +69,11 @@
   * [perl子程序](perl/perl子程序.md)
   * [perl示例程序](perl/perl示例程序.md)
 
+## plantUML
+
+* [plantUML](plantUML/README.md)
+  * [plantUML类图](plantUML/plantUML类图.md)
+
 ## python
 
 * [python](python/README.md)
