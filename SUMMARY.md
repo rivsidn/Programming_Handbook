@@ -49,7 +49,11 @@
   * [CPP执行](C/CPP执行.md)
   * [CPP工作原理](C/CPP工作原理.md)
   * [GCC源码编译](C/GCC源码编译.md)
-  * [GDB调试程序](C/GDB调试程序.md)
+
+## GDB
+
+* [GDB](GDB/README.md)
+  * [GDB调试程序](GDB/GDB调试程序.md)
 
 ## ld script
 
