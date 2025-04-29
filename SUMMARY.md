@@ -54,6 +54,7 @@
 
 * [GDB](GDB/README.md)
   * [GDB调试程序](GDB/GDB调试程序.md)
+  * [GDB添加共享库符号表](GDB/GDB添加共享库符号表.md)
 
 ## ld script
 
