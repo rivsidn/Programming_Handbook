@@ -87,7 +87,7 @@ $ sudo dpkg -L libglib2.0-0t64-dbgsym:amd64
 /usr/share/doc/libglib2.0-0t64-dbgsym
 ```
 
-# 添加所有文件到gdb 下
+添加debug sym 文件到GDB.
 
 ```gdb
 add-symbol-file /usr/lib/debug/.build-id/23/f365cf00be49a4a99229d2b8cb0e0555abbddb.debug
