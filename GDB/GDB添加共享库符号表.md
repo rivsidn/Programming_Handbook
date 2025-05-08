@@ -40,6 +40,8 @@ From                To                  Syms Read   Shared Object Library
 
 ```bash
 # 查找该库对应的安装包
+$ sudo apt install apt-file
+$ sudo apt-file update
 $ apt-file search /lib/x86_64-linux-gnu/libglib-2.0.so.0
 libglib2.0-0t64: /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
 libglib2.0-0t64: /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.8200.1
