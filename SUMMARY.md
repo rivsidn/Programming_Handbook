@@ -83,6 +83,7 @@
 ## plantUML
 
 * [plantUML](plantUML/README.md)
+  * [plantUML注释](plantUML/plantUML注释.md)
   * [plantUML类图](plantUML/plantUML类图.md)
 
 ## python
