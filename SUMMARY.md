@@ -2,19 +2,6 @@
 
 * [Introduction](README.md)
 
-## MASM
-
-* [MASM](MASM/README.md)
-  * [MASM环境搭建](MASM/MASM环境搭建.md)
-  * [符号数比较](MASM/符号数比较.md)
-
-## NASM
-
-* [NASM](NASM/README.md)
-  * [NASM](NASM/)
-
-### 调试工具
-  * [调试工具](NASM/tools/README.md)
 
 ## bash
 
@@ -69,6 +56,20 @@
 ## ld script
 
 * [lds](lds/README.md)
+
+## NASM
+
+* [NASM](NASM/README.md)
+  * [NASM示例程序](NASM/NASM示例程序.md)
+  * [汇编中的几种寻址方式](NASM/汇编中的几种寻址方式.md)
+### 调试工具
+  * [调试工具](NASM/tools/README.md)
+
+## MASM
+
+* [MASM](MASM/README.md)
+  * [MASM环境搭建](MASM/MASM环境搭建.md)
+  * [符号数比较](MASM/符号数比较.md)
 
 ## m4
 
