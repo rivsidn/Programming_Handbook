@@ -61,6 +61,8 @@
 
 * [NASM](NASM/README.md)
   * [NASM示例程序](NASM/NASM示例程序.md)
+  * [Linux系统调用](NASM/Linux系统调用.md)
+  * [PIE与NOPIE](NASM/PIE与NOPIE.md)
   * [汇编中的几种寻址方式](NASM/汇编中的几种寻址方式.md)
 ### 调试工具
   * [调试工具](NASM/tools/README.md)
