@@ -84,6 +84,11 @@
   * [makefile难点介绍](makefile/makefile难点介绍.md)
   * [makefile常用函数](makefile/makefile常用函数.md)
 
+## JavaScript
+
+* [javascript](javascript/README.md)
+  * [json](json.md)
+
 ## perl
 
 * [perl](perl/README.md)
@@ -104,6 +109,7 @@
   * [python基础](python/python_base/README.md)
     * [python数据类型](python/python_base/python数据类型.md)
   * [python工具集](python/tools/README.md)
+    * [python虚拟环境](python/tools/python虚拟环境.md)
 
 ## tcl
 
