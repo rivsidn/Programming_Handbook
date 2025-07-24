@@ -59,12 +59,14 @@ deactivate
 uv init mcp-client
 cd mcp-client
 
-# Create virtual environment
-uv venv
+# 不需要手动创建虚拟环境
 
-# Activate virtual environment
-# On Unix or MacOS:
-source .venv/bin/activate
+## Create virtual environment
+#uv venv
+#
+## Activate virtual environment
+## On Unix or MacOS:
+#source .venv/bin/activate
 
 # Install required packages
 uv add mcp anthropic python-dotenv
