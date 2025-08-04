@@ -58,6 +58,10 @@
 
 * [lds](lds/README.md)
 
+## html
+
+* [html](html/README.md)
+
 ## NASM
 
 * [NASM](NASM/README.md)
