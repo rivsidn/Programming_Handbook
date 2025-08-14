@@ -45,6 +45,12 @@
   * [CPP工作原理](C/CPP工作原理.md)
   * [GCC源码编译](C/GCC源码编译.md)
 
+## dot
+
+* [dot](dot/README.md)
+  * [dot注释](dot/dot注释.md)
+  * [dot基本示例](dot/dot基本示例.md)
+
 ## GDB
 
 * [GDB](GDB/README.md)
@@ -58,9 +64,6 @@
 
 * [lds](lds/README.md)
 
-## html
-
-* [html](html/README.md)
 
 ## NASM
 
@@ -72,12 +75,6 @@
 ### 调试工具
   * [调试工具](NASM/tools/README.md)
 
-## MASM
-
-* [MASM](MASM/README.md)
-  * [MASM环境搭建](MASM/MASM环境搭建.md)
-  * [符号数比较](MASM/符号数比较.md)
-
 ## m4
 
 * [m4](m4/README.md)
@@ -87,6 +84,21 @@
 * [makefile](makefile/README.md)
   * [makefile难点介绍](makefile/makefile难点介绍.md)
   * [makefile常用函数](makefile/makefile常用函数.md)
+
+## MASM
+
+* [MASM](MASM/README.md)
+  * [MASM环境搭建](MASM/MASM环境搭建.md)
+  * [符号数比较](MASM/符号数比较.md)
+
+## html
+
+* [html](html/README.md)
+
+## Java
+
+* [java](java/README.md)
+  * [java安装](java/java安装.md)
 
 ## JavaScript
 
@@ -104,8 +116,9 @@
 ## plantUML
 
 * [plantUML](plantUML/README.md)
+  * [plantUML安装](plantUML/plantUML安装.md)
   * [plantUML注释](plantUML/plantUML注释.md)
-  * [plantUML类图](plantUML/plantUML类图.md)
+  * [plantUML简单示例](plantUML/plantUML简单示例.md)
 
 ## python
 
