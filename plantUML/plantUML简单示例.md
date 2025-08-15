@@ -43,15 +43,21 @@ java -jar /opt/plantuml.jar -tpng demo.puml
 ```makefile
 DOT_FILES := $(wildcard *.dot)
 PUML_FILES := $(wildcard *.puml)
-PNG_FILES := $(DOT_FILES:.dot=.png) $(PUML_FILES:.puml=.png)
+
+DOT_PNG_FILES := $(DOT_FILES:.dot=_dot.png)
+PUML_PNG_FILES := $(PUML_FILES:.puml=_puml.png)
+
+PNG_FILES := $(DOT_PNG_FILES) $(PUML_PNG_FILES)
 
 all: $(PNG_FILES)
 
-%.png: %.dot
+%_dot.png: %.dot
 	dot -Tpng $< -o $@
 
-%.png: %.puml
-    java -jar /opt/plantuml.jar -tpng $<
+%_puml.png: %.puml
+	java -jar /opt/plantuml.jar -tpng $<
+	mv $*.png $@
+
 
 clean:
 	rm -f *.png
