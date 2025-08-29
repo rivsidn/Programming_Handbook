@@ -50,6 +50,8 @@
 * [dot](dot/README.md)
   * [dot注释](dot/dot注释.md)
   * [dot基本示例](dot/dot基本示例.md)
+  * [dot常用语法](dot/dot常用语法.md)
+  * [dot展示函数调用关系](dot/dot展示函数调用关系.md)
 
 ## GDB
 
