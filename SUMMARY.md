@@ -54,6 +54,15 @@
   * [GDB脚本](GDB/GDB脚本.md)
   * [GDB-python脚本](GDB/GDB-python脚本.md)
 
+## go
+
+* [go](go/README.md)
+  * [go程序基础](go/go程序基础.md)
+  * [go变量](go/go变量.md)
+  * [go函数](go/go函数.md)
+  * [go模块初始化](go/go模块初始化.md)
+  * [go程序调试](go/go程序调试.md)
+
 ## ld script
 
 * [lds](lds/README.md)
