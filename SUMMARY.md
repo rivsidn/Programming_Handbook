@@ -67,9 +67,17 @@
 * [go](go/README.md)
   * [go程序基础](go/go程序基础.md)
   * [go变量](go/go变量.md)
+  * [go控制语句](go/go控制语句.md)
   * [go函数](go/go函数.md)
-  * [go模块初始化](go/go模块初始化.md)
+  * [go包](go/go包.md)
+  * [go模块](go/go模块.md)
+  * [go工程初始化](go/go工程初始化.md)
   * [go程序调试](go/go程序调试.md)
+
+### go语言包
+
+  * [go语言包](go/packages/README.md)
+
 
 ## ld script
 

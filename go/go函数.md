@@ -1,11 +1,13 @@
+## Go函数
+
 ### 函数基础
 
 ```go
 package main
 
-import fmt
+import "fmt"
 
-main() {
+func main() {
     fmt.Println("hello world")
 }
 ```
@@ -20,7 +22,7 @@ import (
 	"fmt"
 )
 
-func sum(a int, b int) int {
+func sum(a int, b int) int {    //声明函数返回值为 int
 	return a + b
 }
 
@@ -30,5 +32,12 @@ func main() {
 ```
 
 函数返回值示例.
+
+
+### 特殊函数
+
+| 函数名称 | 说明                  |
+|----------|-----------------------|
+| init     | main 函数执行之前调用 |
 
 
