@@ -45,6 +45,12 @@
   * [CPP工作原理](C/CPP工作原理.md)
   * [GCC源码编译](C/GCC源码编译.md)
 
+## cpp
+
+* [cpp](cpp/README.md)
+  * [cpp函数接口查询](cpp/cpp函数接口查询.md)
+  * [左值引用与右值引用](cpp/左值引用与右值引用.md)
+
 ## dot
 
 * [dot](dot/README.md)
