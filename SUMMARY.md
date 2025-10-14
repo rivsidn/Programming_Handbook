@@ -23,6 +23,7 @@
   * [bash算术运算](bash/bash算术运算.md)
   * [bash行编译设置](bash/bash行编辑设置.md)
   * [bash搜索历史记录](bash/bash搜索历史记录.md)
+  * [bash输入支持vim模式](bash/bash输入支持vim模式.md)
   * [bash脚本使用案例](bash/cases/README.md)
     * [进程并发数控制](bash/cases/进程并发数控制.md)
   * [bash脚本常用命令](bash/manual/README.md)
