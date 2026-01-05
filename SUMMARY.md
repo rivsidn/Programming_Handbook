@@ -6,6 +6,7 @@
 ## bash
 
 * [bash](bash/README.md)
+  * [bash选项设置](bash/bash选项设置.md)
   * [bash名词定义](bash/bash名词定义.md)
   * [bash执行流程](bash/bash执行流程.md)
   * [bash注释](bash/bash注释.md)
