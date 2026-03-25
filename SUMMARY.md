@@ -61,6 +61,10 @@
   - [dot常用语法](dot/dot常用语法.md)
   - [dot展示函数调用关系](dot/dot展示函数调用关系.md)
 
+## elisp
+
+- [elisp](elisp/SUMMARY.md)
+
 ## GDB
 
 - [GDB](GDB/SUMMARY.md)
