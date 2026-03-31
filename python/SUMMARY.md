@@ -11,6 +11,6 @@
 - [python装饰器](python/python装饰器.md)
 
 
-- [python虚拟环境](python/python虚拟环境.md)
-
+- [python虚拟环境(一)](python/python虚拟环境-1.md)
+- [python虚拟环境(二)](python/python虚拟环境-2.md)
 

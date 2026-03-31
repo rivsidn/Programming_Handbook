@@ -18,10 +18,15 @@
 - [elisp代码调试](elisp/elisp代码调试.md)
 
 
-- [Emacs程序加载顺序](elisp/Emacs程序加载顺序.md)
-
 - [elisp编译](elisp/elisp编译.md)
 - [elisp常用函数](elisp/elisp常用函数.md)
   - [add-to-list函数](elisp/funcs/add-to-list函数.md)
+  - [define-key函数](elisp/funcs/define-key函数.md)
+  - [keymap-set函数](elisp/funcs/keymap-set函数.md)
+
+
+- [Emacs程序加载顺序](elisp/Emacs程序加载顺序.md)
+- [Emacs键位映射](elisp/Emacs键位映射.md)
+
 
 
