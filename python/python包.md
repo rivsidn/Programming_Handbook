@@ -1,5 +1,33 @@
 
+### 包定义
+
 包(package) 可以理解成是模块(modules) 的集合.
+
+Python 包就是一个包含包含若干 .py 模块、一个 __init__.py 文件 的目录.
+
+```
+my_package/
+├── __init__.py
+├── utils.py
+└── models.py
+```
+
+如果你想把它做成一个可安装的 Python 包，通常还要加上项目配置文件，比如 pyproject.toml:
+
+```
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my-package"
+version = "0.1.0"
+description = "一个示例 Python 包"
+authors = [{name = "Your Name"}]
+```
+
+定义文件名和依赖.
+
 
 ### 导入包路径查找顺序
 
@@ -89,4 +117,12 @@ from mcp.server import Server
 - 进入到 lowlevel 下， 发现Server 来自 server 模块
 - 导入到本地
 
+### 简化导入名
+
+导入名称简化写法.
+
+```
+import numpy as np
+import pandas as pd
+```
 
