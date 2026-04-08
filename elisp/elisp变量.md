@@ -7,8 +7,6 @@
 
 ## 字符串
 
-
-
 ## 符号
 
 ### 检查是否是符号变量
@@ -27,6 +25,17 @@
 (message "b value %s", b)
 (message "b value %d", (symbol-value b))
 ```
+
+## 标记
+
+
+## 函数
+
+```lisp
+(mapcar #'marker-position mark-ring)
+```
+
+在 mapcar 这种“第一个参数必须是函数”的地方，通常写 #'函数名。
 
 ## 附录
 
