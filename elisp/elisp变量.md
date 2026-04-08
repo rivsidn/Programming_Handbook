@@ -1,8 +1,38 @@
 
+## 整数
+
+## 浮点数
+
+## 字符
+
+## 字符串
 
 
 
-› elisp 中值的类型
+## 符号
+
+### 检查是否是符号变量
+
+```lisp
+(setq b 'a)
+(symbolp b)     ; => t
+```
+
+### 输出符号变量的值
+
+```lisp
+(setq a 100)
+(setq b 'a)
+
+(message "b value %s", b)
+(message "b value %d", (symbol-value b))
+```
+
+## 附录
+
+### AI
+
+#### elisp 中值的类型
 
 
 • 我接着上一个问题，直接从“值有类型，变量没有固定类型”展开，把 Elisp 里最常见的值类型列出来，并给最小例子。

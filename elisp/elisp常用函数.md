@@ -1,10 +1,22 @@
 
+## 函数定义
+
+```elisp
+(defun Multiply-by-seven (number)
+    "Multiply NUMBER by seven."
+    (message "calling func")
+    (* 7 number)
+)
+```
+
+函数执行体不必须是 list.
+
+
 ## Emacs 函数帮助手册
 
 | 快捷键 | 说明         |
 |--------|--------------|
 | C-h f  | 查询函数说明 |
-
 
 ## 附录
 

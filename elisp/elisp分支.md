@@ -1,6 +1,33 @@
 
-› elisp 分支语句
+## if
 
+### 原型
+
+```lisp
+(if COND THEN ELSE...)
+```
+
+`THEN` 只能有一条表达式，`ELSE` 可以有 0 条或者多条表达式。
+
+### 示例
+
+```lisp
+(if t
+    (progn
+      (message "第一条输出")
+      (message "第二条输出")
+      (message "第三条输出")))
+```
+
+由于`THEN` 只能有多条表达式，所以这里如果需要执行多条表达式，需要通过`progn` 连起来。
+
+
+
+## 附录
+
+### AI
+
+#### elisp 分支语句
 
 • 我按入门最常用的几种分支形式来讲，先讲 if、when、unless、cond，这些基本够你写大多数 Elisp 代码了。
 

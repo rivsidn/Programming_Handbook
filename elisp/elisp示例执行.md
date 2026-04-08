@@ -30,5 +30,3 @@ M-x eval-buffer
 emacs --script demo.el
 ```
 
-
-
