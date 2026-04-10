@@ -28,6 +28,7 @@
   - [add-to-list函数](elisp/funcs/add-to-list函数.md)
   - [define-key函数](elisp/funcs/define-key函数.md)
   - [keymap-set函数](elisp/funcs/keymap-set函数.md)
+  - [push-mark函数](elisp/funcs/push-mark函数.md)
 
 ## special-form
 

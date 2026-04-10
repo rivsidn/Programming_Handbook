@@ -2,7 +2,7 @@
 ## 单行注释
 
 ```python
- This is a comment
+# This is a comment
 ```
 
 多行注释就是多个单行注释.
