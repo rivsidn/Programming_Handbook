@@ -4,36 +4,53 @@
 - (interactive)：让函数变成可交互调用的命令
 - (interactive "...")：除了变成命令，还告诉 Emacs 怎么读取用户输入
 
-### 1
+## 应用示例
+
+### 无参数
 
 ```lisp
-  (defun hello-a ()
-    (message "你好 A"))
+(defun hello-a ()
+  (message "你好 A"))
 
-  (defun hello-b ()
-    (interactive)
-    (message "你好 B"))
+(defun hello-b ()
+  (interactive)
+  (message "你好 B"))
 ```
+
 函数 `hello-b()`可以通过 M-x 调用.
 
-### 2
+### 字符串参数
 
 ```lisp
-  (defun hello-demo (name)
-    "向用户问好。"
-    (interactive "s请输入名字: ")
-    (message "你好，%s！" name))
+(defun hello-demo (name)
+  "向用户问好。"
+  (interactive "s请输入名字: ")
+  (message "你好，%s！" name))
 ```
 
-  这时：
+执行时会出现体式词，根据提示词输入名字，然后通过message 输出.
 
-  1. M-x hello-demo
-  2. Emacs 会在 minibuffer 提示：请输入名字:
-  3. 你输入 Tom
-  4. 显示：你好，Tom！
+字符串首字母用于体现参数的类型.
+
+### 列表参数
+
+```lisp
+
+(defun interactive_list_demo (number)
+  "展示interactive list 参数用法"
+  (interactive (list (point)))
+  (message "Point is %d" number))
+```
+
+- 计算`interactive` 列表获取参数
+- 依次将列表计算的结果传递给参数执行函数
+
+
+## 附录
+
+### AI
 
 › 函数参数 与 interactive 之间的关系
-
 
 • 我直接把这两个概念拆开讲：函数参数负责“函数需要什么值”，interactive 负责“用户用命令方式调用时，这些值从哪里来”。
 
