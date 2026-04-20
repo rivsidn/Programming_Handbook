@@ -26,3 +26,13 @@
   - [pytest执行过程](python/pytest/pytest执行过程.md)
 
 
+
+## python库
+
+### textual
+
+- [textual](python/textual/README.md)
+  - [textual安装](python/textual/textual安装.md)
+
+
+
